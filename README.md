@@ -1,4 +1,4 @@
-# rpi-powerwalker-plus
+# Powerwalker+ Docker container for a Raspberry Pi
 
-## Container to run Powerwalker plus mgmt software on a Raspberry Pi 4 64-bit
+Original from [Reddit](https://www.reddit.com/r/homelab/comments/13pnjnm/powerwalker_ups_powermaster_software_in_docker/).
 
