@@ -2,7 +2,15 @@
 
 set -e
 
-if ! -e /opt/pmasterp/data/pmasterpd; then
+stop_pmaster() {
+    echo "Stopping pmasterpd service..."
+    service pmasterpd stop
+    exit
+}
+
+trap stop_pmaster SIGTERM SIGINT
+
+if ! [ -f /opt/pmasterp/data/pmasterpd ]; then
     echo "First run, installing pmasterpd into /opt/pmasterp/data..."
     cd $(dirname "$0")
     unzip pmp105_linux64.zip
@@ -11,5 +19,8 @@ if ! -e /opt/pmasterp/data/pmasterpd; then
     echo "Installation done."
 fi
 
-echo "Launching pmasterpd..."
-service pmasterpd start & trap : TERM INT; sleep infinity & wait
+service pmasterpd start
+
+while true; do
+    sleep 2
+done
