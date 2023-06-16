@@ -25,5 +25,5 @@ Note, need more port mappings.
 
 ## TODO
 
-* Installing on build not suitable, should install into
-  mapped volume on first run in order to persist.
+* Test with actual USB device (once I get the new batteries for
+  my device).
