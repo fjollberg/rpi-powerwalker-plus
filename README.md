@@ -15,7 +15,7 @@ This container provides the "Local" service.
 
 ## Running
 
-```docker run --detach --name powermaster -p 8080:3052 rpi-powerwalker-plus```
+```docker run --detach --name powermaster -p 8080:3052 -v /opt/pmasterp:/opt/pmasterp/data rpi-powerwalker-plus```
 
 Note, need more port mappings.
 
