@@ -8,6 +8,11 @@ This project failed spectacularly in the current setup to run on a
 Raspberry Pi. The issue is that the bundled JRE does not support the
 architecture. I guess I should have seen that in advance.
 
+In addition, there are other binaries in the bin folder of Powermaster
+which does not match the architecture. I'm uncertain what role they
+play. I'm mainly interrested in viewing the status of the UPS device
+and not in the USP event propagation bits.
+
 It runs as-is on the target architecture x86-64.
 
 I'm considering doing a retake on this, extracting the webapp and using
