@@ -21,6 +21,5 @@ fi
 
 service pmasterpd start
 
-while true; do
-    sleep 2
-done
+sleep infinity &
+wait $!
