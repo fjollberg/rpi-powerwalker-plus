@@ -13,7 +13,7 @@ trap stop_pmaster SIGTERM SIGINT
 if ! [ -f /opt/pmasterp/data/pmasterpd ]; then
     echo "First run, installing pmasterpd into /opt/pmasterp/data..."
     cd $(dirname "$0")
-    unzip pmp105_linux64.zip
+    unzip -o pmp105_linux64.zip 
     bash pmasterp105-linux-x86_x64.sh -q -dir /opt/pmasterp/data -varfile response.varfile
     rm -f pmasterp105-linux-x86_x64.sh
     echo "Installation done."
@@ -21,6 +21,5 @@ fi
 
 service pmasterpd start
 
-while true; do
-    sleep 2
-done
+sleep infinity &
+wait $!
