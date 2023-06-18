@@ -15,7 +15,7 @@ is also necessary, to talk to the device I presume.
 
 So, end of the road.
 
-It runs as-is on the target architecture x86-64, and can attach
+It *does* run on the target architecture x86-64, and can attach
 to the USB device if run with privileged flag set.
 
 ## PowerMaster+
@@ -36,9 +36,7 @@ This container provides the "Local" service.
 While it is possible to redirect ports to other port numbers in docker, the
 web interface will break if changed from 3025 due to links being hardcoded.
 
-Note, need more port mappings.
-
-## Testing
+## "Development" and Testing
 
 ### Running the service manually.
 
@@ -46,13 +44,6 @@ Connecting to the container with another shell makes it possible to kill
 the java process and start a new manually in order to catch output.
 
 ```./jre/bin/java -classpath lib/Startup.jar -Xmx256m -Xms128m -Djava.net.preferIPv4Stack=true -Djava.library.path=./bin -Djava.ext.dirs=./jre/lib/ext com.cyberpowersystems.ppbe.startup.Startup start```
-
-Indicates issues with finding the USB device:
-
-`
-...com.cyberpowersystems.utility.Logger     : ! listDeviceStatement.hasResults()
-...com.cyberpowersystems.utility.Logger     : Service.deviceMonitoring: deviceId still -1 after lookupPresentDeviceId
-`
 
 ### Connecting to the container
 
