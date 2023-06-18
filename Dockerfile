@@ -12,7 +12,7 @@ EXPOSE 53566/udp
 CMD ["/bin/bash","/opt/pmasterp/start.sh"] 
 
 # Install dependencies
-RUN apt update && apt install -y apt-utils curl unzip procps
+RUN apt update && apt install -y apt-utils curl unzip procps libusb-1.0-0 usbutils
 RUN ln -s /opt/pmasterp/data/pmasterpd /etc/init.d/pmasterpd 
 
 # Download PowerMaster from powerwalker.com
