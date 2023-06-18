@@ -5,13 +5,14 @@ Original idea from [Reddit](https://www.reddit.com/r/homelab/comments/13pnjnm/po
 ## Failed spectacularly to run on Raspberry Pi
 
 This project failed spectacularly to run on a Raspberry Pi which
-was my original intention to see if I could achieve.
-The primary isse is that the bundled JRE does not support the arm64
+was my original intention.
+The first issue is that the bundled JRE does not support the arm64
 architecture. I guess I should have seen that in advance.
 
-In addition there are other binaries in the package. I've made
-an attempt to provide anarnm64 jre, but the libppbedrvc.so
-is also necessary, to talk to the device I presume.
+But in addition there are other binaries in the package. I've made
+an attempt to provide an arm64 jre from unstable, and the webapp
+starts with it, but the libppbedrvc.so is also necessary, to
+talk to the actual device I presume.
 
 So, end of the road.
 
