@@ -4,20 +4,18 @@ Original idea from [Reddit](https://www.reddit.com/r/homelab/comments/13pnjnm/po
 
 ## Failed spectacularly to run on Raspberry Pi
 
-This project failed spectacularly in the current setup to run on a
-Raspberry Pi. The issue is that the bundled JRE does not support the
+This project failed spectacularly to run on a Raspberry Pi.
+The priimary isse is that the bundled JRE does not support the arm64
 architecture. I guess I should have seen that in advance.
 
-In addition, there are other binaries in the bin folder of Powermaster
-which does not match the architecture. I'm uncertain what role they
-play. I'm mainly interrested in viewing the status of the UPS device
-and not in the USP event propagation bits.
+In addition there are other binaries in the package. I've made
+an attempt to provide an 64 jre, but the libppbedrvc.so
+is also necessary, to talk to the device I presume.
 
-It runs as-is on the target architecture x86-64.
+So, end of the road.
 
-I'm considering doing a retake on this, extracting the webapp and using
-a JRE as provided by the environment. But this feels like violating
-the Powerwalker rights to the software a bit.
+It runs as-is on the target architecture x86-64, but is not tested
+further.
 
 ## PowerMaster+
 
