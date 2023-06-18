@@ -43,6 +43,10 @@ web interface will break if changed from 3025 due to links being hardcoded.
 
 ## "Development" and Testing
 
+### Connecting to the container
+
+```docker exec -it powermaster /bin/bash```
+
 ### Running the service manually.
 
 Connecting to the container with another shell makes it possible to kill
@@ -50,6 +54,5 @@ the java process and start a new manually in order to catch output.
 
 ```./jre/bin/java -classpath lib/Startup.jar -Xmx256m -Xms128m -Djava.net.preferIPv4Stack=true -Djava.library.path=./bin -Djava.ext.dirs=./jre/lib/ext com.cyberpowersystems.ppbe.startup.Startup start```
 
-### Connecting to the container
-
-```docker exec -it powermaster /bin/bash```
+Assuming you use the provided jre and that /opt/pmasterp/data is the current
+working directory.
