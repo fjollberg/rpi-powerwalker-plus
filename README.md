@@ -14,8 +14,8 @@ is also necessary, to talk to the device I presume.
 
 So, end of the road.
 
-It runs as-is on the target architecture x86-64, but is not tested
-further.
+It runs as-is on the target architecture x86-64, but have not
+managed to get it to find the UPS device so far.
 
 ## PowerMaster+
 
@@ -30,7 +30,7 @@ This container provides the "Local" service.
 
 ## Running
 
-```docker run --detach --name powermaster -p 3052:3052 -v /opt/pmasterp:/opt/pmasterp/data rpi-powerwalker-plus```
+```docker run --name powermaster -p 3052:3052 -p 3052:3052/udp -p 53568:53568/udp -p 162:162/udp -p 53566:53566/udp -v /opt/pmasterp:/opt/pmasterp/data --privileged -v /dev:/dev  rpi-powerwalker-plus:latest```
 
 While it is possible to redirect ports to other port numbers in docker, the
 web interface will break if changed from 3025 due to links being hardcoded.
