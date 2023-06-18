@@ -1,10 +1,11 @@
-# PowerMaster+ Docker container for a Raspberry Pi
+# PowerMaster+ Docker container
 
 Original idea from [Reddit](https://www.reddit.com/r/homelab/comments/13pnjnm/powerwalker_ups_powermaster_software_in_docker/).
 
 ## Failed spectacularly to run on Raspberry Pi
 
-This project failed spectacularly to run on a Raspberry Pi.
+This project failed spectacularly to run on a Raspberry Pi which
+was my original intention to see if I could achieve.
 The primary isse is that the bundled JRE does not support the arm64
 architecture. I guess I should have seen that in advance.
 
