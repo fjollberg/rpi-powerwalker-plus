@@ -1,5 +1,6 @@
 # PowerMaster+ Docker container
 
+Runs PowerMaster+ UPS management software from a Docker container. 
 Original idea from [Reddit](https://www.reddit.com/r/homelab/comments/13pnjnm/powerwalker_ups_powermaster_software_in_docker/).
 
 ## Failed spectacularly to run on Raspberry Pi
