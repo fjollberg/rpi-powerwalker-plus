@@ -29,6 +29,10 @@ hosts which listens to UPS events "Local" broadcasts.
 
 This container provides the "Local" service.
 
+## Building
+
+```docker build . --tag rpi-powerwalker-plus:latest```
+
 ## Running
 
 ```docker run --name powermaster -p 3052:3052 -p 3052:3052/udp -p 53568:53568/udp -p 162:162/udp -p 53566:53566/udp -v /opt/pmasterp:/opt/pmasterp/data --privileged rpi-powerwalker-plus:latest```
